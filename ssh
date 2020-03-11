@@ -1,0 +1,8 @@
+ssh :
+ip domain-name ....
+username .... secret .... <mengaktifkan user dan password ektika akses ssh>
+line vty 0 4
+transport input all
+login local
+exit
+crypto key generate rsa <sshv2 1024>
