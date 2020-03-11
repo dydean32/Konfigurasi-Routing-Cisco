@@ -1,0 +1,3 @@
+line vty o 4
+password ....
+login 
