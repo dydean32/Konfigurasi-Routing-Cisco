@@ -1,0 +1,54 @@
+ROUTER STATIC IPV4
+ip route destination network sm next hop ip
+next hop ip : ip interface tangga
+
+static v6
+konfig ipv6
+ipv6 add
+ipv6 unicast-routing
+ipv6 route ::/0 next hop ip
+
+rip v1
+router rip
+network (network yang terhubung)
+
+v2
+router rip
+version 2
+no auto-summary
+network (network yang terhubung)
+
+ripng
+
+konfig ipv6 add......
+ipv6 unicast-routing....
+ipv6 router rip (nama)
+int (masuk ke interface)
+ipv6 rip (nama) ena
+kemudian masuk ke interface selanjutnya lagi yang terhubung
+ketik ipv6 rip (nama) ena
+
+router eigrp
+konfig ipv4
+router eigrp <asn>
+network (network yang terhubung langsung)
+
+
+Router OSPF
+router ospf <Proced-id>10
+router-id <Ip Packet Header> 1.1.1.1 (ip bebas, asalkan tidak dipakai gateway ataupun router)
+network <network-id> <Wildcard netmask> (reverse netmask) 0.0.0.255 area <area-id>
+atau 
+router ospf (masukan angka bebas)
+network <(network yang terhubung)> <(wildcard netmask)> area <areanya>
+ 
+KONFIGURASI ACL 
+-konfig salah ip address
+-kemudian lakukan routing seperti biasanya
+-lalu konfigurasi di salah satu router. biasanya paling dekat dengan destination
+#database
+access-list 2 deny host 192.1.1.3<ip yan akan diblok>
+access-list 2 permit only
+#ACL di port
+int g0/1
+ip access-group 2 out
