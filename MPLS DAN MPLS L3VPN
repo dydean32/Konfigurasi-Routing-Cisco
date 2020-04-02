@@ -1,0 +1,28 @@
+Multi-Protocol Label Switching (MPLS)
+adalah suatu metode forwarding (meneruskan data
+melalui suatu jaringan dengan menggunakan
+informasi dalam label yang dilekatkan pada IP),
+sehingga memungkinkan router untuk meneruskan
+paket dengan hanya melihat label dari paket itu, tidak
+perlu melihat IP alamat tujuannya.
+
+Salah satu feature yang dapat digunakan pada
+jaringan MPLS adalah VPN (Virtual Private
+Network) yang sering disebut sebagai MPLS-VPN.
+VPN dapat terbentuk dengan adanya fasilitas tunnel
+yang dapat melintasi jaringan MPLS. Fasilitas tunnel
+tersebut bisa membangun sebuah jalur sebuah site ke
+site yang lain secara virtual dan mempunyai tingkat
+keamanan yang cukup baik karena site to site
+connection tersebut hanya dapat diakses oleh user
+yang berada pada salah satu site (private connection).
+
+VPN yang dibangun diatas jaringan MPLS,
+dimana trafik yang ada pada jaringan MPLS-VPN
+tersebut benar-benar terisolasi sehingga trafik tidak
+dapat dibocorkan sama sekali. Mekanisme VPN yang
+dibangun pada jaringan MPLS mirip dengan
+teknologi virtual circuit dari jaringan ATM dan
+Frame Relay, bahkan tanpa tingkat security dari
+jaringan MPLS-VPN ini dapat disamakan security
+dari jaringan Frame-Relay.
