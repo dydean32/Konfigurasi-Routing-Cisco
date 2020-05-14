@@ -1,0 +1,52 @@
+BGP Fundamental :
+dinamic routing protocol
+1.interior gateway protocol :
+mengubungkan network dalam satu as yang sama
+ex: menghubungkan network dalam internal isp
+protocol :
+a. distance vector routing protocol 
+: Ripv1,IGRP
+b. link state routing protocol
+: ospf, is-is
+
+2. exterior gateway protocol :menhubungkan antar as / internal network
+
+bgp : routing yang digunakan untuk bertukar informasi antar network/ antar as
+contoh : terdapat menghubungkan isp telkom dengan isp indosat. nah untuk menghubungkan didalam isp telkom
+sendiri menggunakan IGP  
+istilah bgp :
+1. autonomous system : kumpulan dari network dalam satu administrative domain, atau satu owner yg sama
+2. interdomain routing : egp, routing antara customer dan isp
+3. internal routing : igp
+4. external routing : egp juga, bertukar jalur antar as
+bgp : internal bgp dan external bgp
+internal bgp sama dengan internal routing (dalam as yang sama) umumnya digunakan sebagai ip transit
+external bgp menghubunkan as yang berbeda
+syarat deploy bgp : harus ada as number
+
+
+konfigurasi ebgp:
+router bgp <As number>
+neigbor <ip tetangga yg dituju dan terhubung> remote-as <as number yang dituju dan terhubung>
+network <network yang teerhubung > mask <subnet mask>
+
+pemilihan jalur bgp :
+1.set weight map :
+buat dulu routemap di salah satu router
+r1:
+route-map weight
+set wieght 100
+
+router bgp asn
+neighbor <neighbor ip yng ingin dipasang route-map> route-map wieght in
+
+restart router bgp :
+clear ip bgp * soft
+
+local preference :
+2. set local preference
+buat route map 
+route-map localpref
+set local-preference (nomor preferensi)
+router bgp asn
+neig <ip neighbor> route-map localpref in
