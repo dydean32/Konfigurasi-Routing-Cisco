@@ -47,8 +47,8 @@ KONFIGURASI ACL
 -kemudian lakukan routing seperti biasanya
 -lalu konfigurasi di salah satu router. biasanya paling dekat dengan destination
 #database
-access-list 2 deny host 192.1.1.3<ip yan akan diblok>
-access-list 2 permit only
+access-list <nomor bebas 1-99> deny host 192.1.1.3<ip yan akan diblok>
+access-list <nomor bebas 1-99> permit any
 #ACL di port
 int g0/1
-ip access-group 2 out
+ip access-group <nomor yang telah didaftarkan> out
