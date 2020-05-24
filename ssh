@@ -6,3 +6,15 @@ transport input all
 login local
 exit
 crypto key generate rsa <sshv2 1024>
+
+username cisco password cisco
+username cisco priv 15  <supaya tidak diminta password privilege, ketika remote akan langsung masuk privilege>
+line vty 0 4
+login local
+transport input all
+exit
+ip domain-name cisco.net
+crypto key generate rsa
+1024
+end 
+wr
