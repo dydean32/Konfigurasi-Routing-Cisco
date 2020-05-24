@@ -1,3 +1,11 @@
 line vty o 4
 password ....
 login 
+
+username cisco password cisco
+enable password cisco
+line vty 0 4
+transport input telnet
+login local
+end
+
