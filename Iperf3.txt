@@ -1,0 +1,19 @@
+iperf tutorial :
+Iperf adalah salah satu tool untuk mengukur troughput bandwidth dalam sebuah link network, agar bisa dilakukan pengukuran diperlukan Iperf yang terinstall point to point, baik disisi server maupun client.
+1. default
+server side :
+iperf3 -s
+client side :
+iperf -c <ip server>
+2. bandwitdh setting dengan udp dan interval 1
+server side : iperf3 -s u -i 1
+client side : iperf3 -c <ip server> -u -b <nilai bandiwth>m
+
+Iperf.exe –s –u ( lihat gambar 3.8)
+Perintah tersebut berarti menjalankan Iperf mode server dan jenis paket UDP. Jenis
+paket yang digunakan UDP karena pada mode UDP client dapat menentukan bandwidth trafik
+yang diemulasikan
+
+iperf –c [alamt_IP_iperf_server] –b 250K –t 30 (lihat gambar 3.9)
+Perintah tersebut berarti menjalankan iperf mode client, meminta trafik dengan bandwidth 250
+Kbps dan menjalankannya selama 30 detik
