@@ -9,11 +9,11 @@ iperf -c <ip server>
 server side : iperf3 -s u -i 1
 client side : iperf3 -c <ip server> -u -b <nilai bandiwth>m
 
-Iperf.exe –s –u ( lihat gambar 3.8)
+Iperf.exe –s –u
 Perintah tersebut berarti menjalankan Iperf mode server dan jenis paket UDP. Jenis
 paket yang digunakan UDP karena pada mode UDP client dapat menentukan bandwidth trafik
 yang diemulasikan
 
-iperf –c [alamt_IP_iperf_server] –b 250K –t 30 (lihat gambar 3.9)
+iperf –c [alamt_IP_iperf_server] –b 250K –t 30
 Perintah tersebut berarti menjalankan iperf mode client, meminta trafik dengan bandwidth 250
 Kbps dan menjalankannya selama 30 detik
