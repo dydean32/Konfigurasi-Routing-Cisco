@@ -32,6 +32,19 @@ router eigrp
 konfig ipv4
 router eigrp <asn>
 network (network yang terhubung langsung)
+pada router eigrp akan otomatis ada equal load balancing : pembagian beban trafik pada dua buah jalur yang sama.
+untuk mengaktifkan unqueal (kebalikan equal)
+stepnya :
+-masuk ke salah satu interface
+-rubah bandwidht (bandwith ......)
+clear ip route *
+-sh ip route <ip tujuan> ===> mengecek jalur baru akan lewat mana
+cek composite metric yang akan dipakai dalam perhitungan nilai VARIANCE
+sh ip eigrp top ip/prefix
+-lihat composite nilainya kemudian,bagi nilai yng jalur bawah dengan jalur atas, kemudian bulatkan ke atas nilai tsb merupakan nilai variance
+-masuk ke router eigrp yang tellah dibuat
+variance <nilai variance hasil perhitungan>
+
 
 
 Router OSPF
