@@ -1,6 +1,7 @@
 ROUTER STATIC IPV4
 ip route destination network sm next hop ip
 next hop ip : ip interface tangga
+Routing static adjency netwoknya pada router yang tidak terhubung langsung/ nyambung
 
 static v6
 konfig ipv6
